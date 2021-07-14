@@ -1,3 +1,13 @@
 {
-  "extends": ["next", "next/core-web-vitals"]
+  "extends": ["next", "next/core-web-vitals"],
+  "rules": {
+    "no-empty-function": "warn",
+    "no-shadow": "warn",
+    "no-unused-vars": "warn",
+    "block-spacing": ["warn", "always"],
+    "semi": ["warn", "always"],
+    "comma-dangle": ["warn", {
+      "functions": "never"
+    }]
+  }
 }
