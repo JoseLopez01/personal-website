@@ -11,7 +11,7 @@ export default function Work() {
           <div className="flex-shrink-0">
             <img src="/images/trip2-map.jpeg" className="h-48 w-full object-cover md:h-full md:w-48" />
           </div>
-          <div className="p-8 bg-gray-200">
+          <div className="p-8">
             <div class="uppercase tracking-wide text-gray-600 text-medium font-bold">
               Trip2 On Demand
             </div>
@@ -29,7 +29,7 @@ export default function Work() {
           <div className="flex-shrink-0">
             <img src="/images/trip2-map.jpeg" className="h-48 w-full object-cover md:h-full md:w-48" />
           </div>
-          <div className="p-8 bg-gray-200">
+          <div className="p-8">
             <div class="uppercase tracking-wide text-gray-600 text-medium font-bold">
               Trip2 On Demand
             </div>

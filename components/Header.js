@@ -1,34 +1,59 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Header() {
   return (
-    <nav className="max-h-10 h-10 bg-gray-300 md:rounded">
+    <nav className="max-h-10 h-10 md:rounded">
       <div className="flex justify-between items-center h-full px-4">
-        <div>Home</div>
+        <div className="font-bold">
+          JL
+        </div>
         <div className="hidden md:block">
           <div>
             <Link
               href="/"
             >
-              <a className="transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-400">
+              <a className="transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold">
                 Home
               </a>
             </Link>
             <Link
               href="/work"
             >
-              <a className="transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-400">
+              <a className="transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold">
                 Work
               </a>
             </Link>
             <Link
               href="/"
             >
-              <a className="transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-400">
+              <a className="transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold">
                 Contact
               </a>
             </Link>
           </div>
+        </div>
+        <div className="hidden md:block">
+          <Link href="/">
+            <a className="mx-3 text-gray-400">
+              <Image src="/icons/twitter.svg" height={20} width={20} />
+            </a>
+          </Link>
+          <Link href="/">
+            <a className="mx-3 text-gray-400">
+              <Image src="/icons/github.svg" height={20} width={20} />
+            </a>
+          </Link>
+          <Link href="/">
+            <a className="mx-3 text-gray-400">
+              <Image src="/icons/linkedin.svg" height={20} width={20} />
+            </a>
+          </Link>
+          <Link href="/">
+            <a className="mx-3 text-gray-400">
+              <Image src="/icons/instagram.svg" height={20} width={20} />
+            </a>
+          </Link>
         </div>
       </div>
     </nav>
