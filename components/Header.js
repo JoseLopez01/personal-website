@@ -7,11 +7,11 @@ export default function Header() {
 
   /**
    * TODO:
-   * 
+   *
    * - [] Create a new component for Links
    * - [] Create a nwe component for Image Icons
    * - [] Add responsive new navBar
-  */
+   */
   return (
     <nav className="max-h-10 h-10 md:rounded">
       <div className="flex justify-between items-center h-full px-4">
@@ -21,7 +21,7 @@ export default function Header() {
             <Link href="/">
               <a
                 className={`transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold ${
-                  router.pathname === '/' ? 'text-blue-400 bg-gray-200' : ''
+                  router.pathname === '/' ? 'bg-gray-200' : ''
                 }`}
               >
                 Home
@@ -30,7 +30,7 @@ export default function Header() {
             <Link href="/work">
               <a
                 className={`transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold ${
-                  router.pathname === '/work' ? 'text-blue-400 bg-gray-200' : ''
+                  router.pathname === '/work' ? 'bg-gray-200' : ''
                 }`}
               >
                 Work
@@ -39,9 +39,7 @@ export default function Header() {
             <Link href="/">
               <a
                 className={`transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold ${
-                  router.pathname === '/contact'
-                    ? 'text-blue-400 bg-gray-200'
-                    : ''
+                  router.pathname === '/contact' ? 'bg-gray-200' : ''
                 }`}
               >
                 Contact
