@@ -24,3 +24,19 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.twitter:hover {
+  color: #1DA1F2;
+}
+
+.github:hover {
+  color: #181717;
+}
+
+.linkedin:hover {
+  color: #0A66C2;
+}
+
+.instagram:hover {
+  color: #E4405F;
+}

@@ -1,3 +1,4 @@
+import ScrollIndicator from "./ScrollIndicator";
 import Skills from "./Skills";
 
 export default function Hero() {
@@ -24,6 +25,7 @@ export default function Hero() {
           <div className="h-full ml-auto rounded w-3/5 p-4 bg-gray-600"></div>
         </div>
       </div>
+      <ScrollIndicator />
       <Skills />
     </>
   );

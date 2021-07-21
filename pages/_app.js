@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import Header from '../components/Header';
+import ScrollIndicator from '../components/ScrollIndicator';
 
 import "../styles/globals.css";
 

@@ -49,7 +49,7 @@ export default function Header() {
         </div>
         <div className="hidden md:block">
           <Link href="/">
-            <a className="mx-3 text-gray-400">
+            <a className="mx-3 text-gray-400 twitter">
               <Image src="/icons/twitter.svg" height={20} width={20} />
             </a>
           </Link>
