@@ -13,41 +13,39 @@ export default function Header() {
    * - [] Add responsive new navBar
    */
   return (
-    <nav className="max-h-10 h-10 md:rounded">
+    <nav className="max-h-10 h-10 md:rounded sticky top-0 z-50 bg-white transition duration-300">
       <div className="flex justify-between items-center h-full px-4">
-        <div className="font-bold">JL</div>
+        <div className="font-bold w-1/5">JL</div>
         <div className="hidden md:block">
-          <div>
-            <Link href="/">
-              <a
-                className={`transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold ${
-                  router.pathname === '/' ? 'bg-gray-200' : ''
-                }`}
-              >
-                Home
-              </a>
-            </Link>
-            <Link href="/work">
-              <a
-                className={`transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold ${
-                  router.pathname === '/work' ? 'bg-gray-200' : ''
-                }`}
-              >
-                Work
-              </a>
-            </Link>
-            <Link href="/">
-              <a
-                className={`transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold ${
-                  router.pathname === '/contact' ? 'bg-gray-200' : ''
-                }`}
-              >
-                Contact
-              </a>
-            </Link>
-          </div>
+          <Link href="/">
+            <a
+              className={`transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold ${
+                router.pathname === '/' ? 'bg-gray-200' : ''
+              }`}
+            >
+              Home
+            </a>
+          </Link>
+          <Link href="/work">
+            <a
+              className={`transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold ${
+                router.pathname === '/work' ? 'bg-gray-200' : ''
+              }`}
+            >
+              Work
+            </a>
+          </Link>
+          <Link href="/">
+            <a
+              className={`transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold ${
+                router.pathname === '/contact' ? 'bg-gray-200' : ''
+              }`}
+            >
+              Contact
+            </a>
+          </Link>
         </div>
-        <div className="hidden md:block">
+        <div className="hidden w-1/5 md:flex justify-end">
           <Link href="/">
             <a className="mx-3 text-gray-400 twitter">
               <Image src="/icons/twitter.svg" height={20} width={20} />
