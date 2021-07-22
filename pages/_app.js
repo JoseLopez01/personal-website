@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <main
         role="main"
-        className="container max-w-screen-xl mx-auto font-sans md:py-2 h-full"
+        className="container max-w-screen-xl mx-auto font-sans md:py-2"
       >
         <Header />
         <Component {...pageProps} />

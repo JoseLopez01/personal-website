@@ -17,11 +17,11 @@ export default function Hero() {
               Ionic, Cordova and Capacitor.
             </p>
           </div>
-          <button className="bg-gray-700 w-2/5 px-4 py-2 font-semibold rounded-full text-white hover:bg-gray-800 transition duration-500">
+          <button className="bg-gray-700 w-full md:w-2/5 px-4 py-2 font-semibold rounded-full text-white hover:bg-gray-800 transition duration-500">
             Contact Me
           </button>
         </div>
-        <div className="w-full md:w-1/2 h-full">
+        <div className="hidden h-full md:block md:w-1/2">
           <div className="h-full ml-auto rounded w-3/5 p-4 bg-gray-600"></div>
         </div>
       </div>

@@ -10,7 +10,6 @@ import TailwindSvg from '../icons/TailwindSvg';
 import Skill from './Skill';
 
 export default function Skills() {
-
   const skills = [
     {
       name: 'Angular',
@@ -69,11 +68,11 @@ export default function Skills() {
   ];
 
   return (
-    <div>
+    <>
       <div className="text-4xl font-bold md:text-5xl text-center m-6">
         Technical <span className="text-blue-800">Skills</span>
       </div>
-      <div className="flex justify-around">
+      <div className="flex flex-wrap justify-around">
         {skills.map((skill, index) => (
           <Skill
             percent={skill.percent}
@@ -84,6 +83,6 @@ export default function Skills() {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 }
