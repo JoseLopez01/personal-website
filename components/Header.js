@@ -13,7 +13,7 @@ export default function Header() {
    * - [] Add responsive new navBar
    */
   return (
-    <nav className="max-h-10 h-10 md:rounded sticky top-0 z-50 bg-white transition duration-300">
+    <nav className="max-h-10 h-10 shadow-lg md:rounded sticky top-0 z-50 bg-white transition duration-300">
       <div className="flex justify-between items-center h-full px-4">
         <div className="font-bold w-1/5">JL</div>
         <div className="hidden md:block">

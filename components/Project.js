@@ -2,13 +2,13 @@ import Image from 'next/image';
 
 export default function Project() {
   return (
-    <div className="flex my-4 w-2/4 bg-gray-600 rounded-md">
-      <div className="flex-none w-48 relative">
+    <div className="col-span-4 flex mx-6 shadow-lg rounded-md lg:col-span-2">
+      <div className="hidden md:block flex-none w-48">
         <Image
           src="/images/trip2-map.webp"
           height={350}
           width={168}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="w-full h-full object-cover"
         />
       </div>
       <div className="p-6 flex-auto">
