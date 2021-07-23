@@ -1,12 +1,12 @@
 export default function Contact() {
   return (
-    <div>
+    <>
       <div className="text-4xl mb-6 font-bold md:text-5xl text-center md:m-10">
         <span className="text-blue-800">Let's </span>
         get in
         <span className="text-blue-800"> touch</span>
       </div>
-      <form className="shadow-lg w-1/2 rounded-md p-6 mx-auto">
+      <form className="shadow-lg w-full md:w-1/2 rounded-md p-6 mx-auto">
         <input
           type="text"
           placeholder="Name"
@@ -34,6 +34,6 @@ export default function Contact() {
           Submit
         </button>
       </form>
-    </div>
+    </>
   );
 }

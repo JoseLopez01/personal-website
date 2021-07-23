@@ -25,18 +25,17 @@ a {
   box-sizing: border-box;
 }
 
-.twitter:hover {
-  color: #1DA1F2;
+::-webkit-scrollbar {
+  width: 20px;
 }
 
-.github:hover {
-  color: #181717;
+::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
-.linkedin:hover {
-  color: #0A66C2;
-}
-
-.instagram:hover {
-  color: #E4405F;
+::-webkit-scrollbar-thumb {
+  background-color: #D6DEE1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
 }

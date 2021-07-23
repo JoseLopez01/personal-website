@@ -1,10 +1,14 @@
-import { useRouter } from 'next/dist/client/router';
-import Image from 'next/image';
-import Link from 'next/link';
+import MenuSvg from '../icons/MenuSvg';
+import LocalLink from './LocalLink';
+import IconLink from './IconLink';
+import { useState } from 'react';
 
 export default function Header() {
-  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
 
+  function handleToggleMenu() {
+    setIsOpen(!isOpen);
+  }
   /**
    * TODO:
    *
@@ -13,61 +17,28 @@ export default function Header() {
    * - [] Add responsive new navBar
    */
   return (
-    <nav className="max-h-10 h-10 shadow-lg md:rounded sticky top-0 z-50 bg-white transition duration-300">
-      <div className="flex justify-between items-center h-full px-4">
-        <div className="font-bold w-1/5">JL</div>
-        <div className="hidden md:block">
-          <Link href="/">
-            <a
-              className={`transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold ${
-                router.pathname === '/' ? 'bg-gray-200' : ''
-              }`}
-            >
-              Home
-            </a>
-          </Link>
-          <Link href="/work">
-            <a
-              className={`transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold ${
-                router.pathname === '/work' ? 'bg-gray-200' : ''
-              }`}
-            >
-              Work
-            </a>
-          </Link>
-          <Link href="/">
-            <a
-              className={`transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold ${
-                router.pathname === '/contact' ? 'bg-gray-200' : ''
-              }`}
-            >
-              Contact
-            </a>
-          </Link>
-        </div>
-        <div className="hidden w-1/5 md:flex justify-end">
-          <Link href="/">
-            <a className="mx-3 text-gray-400 twitter">
-              <Image src="/icons/twitter.svg" height={20} width={20} />
-            </a>
-          </Link>
-          <Link href="/">
-            <a className="mx-3 text-gray-400">
-              <Image src="/icons/github.svg" height={20} width={20} />
-            </a>
-          </Link>
-          <Link href="/">
-            <a className="mx-3 text-gray-400">
-              <Image src="/icons/linkedin.svg" height={20} width={20} />
-            </a>
-          </Link>
-          <Link href="/">
-            <a className="mx-3 text-gray-400">
-              <Image src="/icons/instagram.svg" height={20} width={20} />
-            </a>
-          </Link>
+    <>
+      <div className="max-h-10 h-10 shadow-lg md:rounded sticky top-0 z-50 bg-white transition duration-300">
+        <div className="flex justify-between items-center h-full px-4">
+          <div className="font-bold w-1/5">JL</div>
+          <div className="hidden md:block">
+            <LocalLink routeName="About Me" pathName={'/'} />
+            <LocalLink routeName="Work" pathName={'/'} />
+            <LocalLink routeName="Contact Me" pathName={'/'} />
+          </div>
+          <div className="w-1/5 hidden md:flex justify-end">
+            <IconLink iconSrc="/icons/twitter.svg" />
+            <IconLink iconSrc="/icons/github.svg" />
+            <IconLink iconSrc="/icons/linkedin.svg" />
+            <IconLink iconSrc="/icons/instagram.svg" />
+          </div>
+          <div className="md:hidden">
+            <button onClick={handleToggleMenu}>
+              <MenuSvg height={25} width={25} />
+            </button>
+          </div>
         </div>
       </div>
-    </nav>
+    </>
   );
 }
