@@ -17,14 +17,26 @@ export default function Header() {
    * - [] Add responsive new navBar
    */
   return (
-    <>
-      <div className="max-h-10 h-10 shadow-lg md:rounded sticky top-0 z-50 bg-white transition duration-300">
+    <header className="sticky top-0 z-50">
+      <div className="max-h-10 h-10 shadow-lg md:rounded bg-white transition duration-300">
         <div className="flex justify-between items-center h-full px-4">
           <div className="font-bold w-1/5">JL</div>
           <div className="hidden md:block">
-            <LocalLink routeName="About Me" pathName={'/'} />
-            <LocalLink routeName="Work" pathName={'/'} />
-            <LocalLink routeName="Contact Me" pathName={'/'} />
+            <LocalLink
+              className="transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold"
+              routeName="About Me"
+              pathName={'/'}
+            />
+            <LocalLink
+              className="transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold"
+              routeName="Work"
+              pathName={'/'}
+            />
+            <LocalLink
+              className="transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold"
+              routeName="Contact Me"
+              pathName={'/'}
+            />
           </div>
           <div className="w-1/5 hidden md:flex justify-end">
             <IconLink iconSrc="/icons/twitter.svg" />
@@ -39,6 +51,25 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </>
+      <div className="absolute right-0 z-50 w-4/5 h-screen md:hidden bg-gray-800">
+        <div className="flex flex-col items-center justify-center h-full">
+          <LocalLink
+            className="w-full flex items-center justify-center h-12 bg-gray-700 rounded font-semibold text-white"
+            routeName="About Me"
+            pathName={'/'}
+          />
+          <LocalLink
+            className="w-full flex items-center justify-center h-12 hover:bg-gray-100 font-semibold text-white"
+            routeName="Work"
+            pathName={'/'}
+          />
+          <LocalLink
+            className="w-full flex items-center justify-center h-12 hover:bg-gray-100 font-semibold text-white"
+            routeName="Contact Me"
+            pathName={'/'}
+          />
+        </div>
+      </div>
+    </header>
   );
 }
