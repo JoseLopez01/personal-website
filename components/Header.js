@@ -39,10 +39,10 @@ export default function Header() {
             />
           </div>
           <div className="w-1/5 hidden md:flex justify-end">
-            <IconLink iconSrc="/icons/twitter.svg" />
-            <IconLink iconSrc="/icons/github.svg" />
-            <IconLink iconSrc="/icons/linkedin.svg" />
-            <IconLink iconSrc="/icons/instagram.svg" />
+            <IconLink className="mx-3 text-gray-400" iconSrc="/icons/twitter.svg" />
+            <IconLink className="mx-3 text-gray-400" iconSrc="/icons/github.svg" />
+            <IconLink className="mx-3 text-gray-400" iconSrc="/icons/linkedin.svg" />
+            <IconLink className="mx-3 text-gray-400" iconSrc="/icons/instagram.svg" />
           </div>
           <div className="md:hidden">
             <button onClick={handleToggleMenu}>
@@ -51,8 +51,12 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="absolute right-0 z-50 w-4/5 h-screen md:hidden bg-gray-800">
-        <div className="flex flex-col items-center justify-center h-full">
+      <div
+        className={`absolute right-0 z-50 w-4/5 h-screen md:hidden bg-gray-800 ${
+          isOpen ? '' : 'hidden'
+        }`}
+      >
+        <div className="flex flex-col items-center justify-center h-5/6">
           <LocalLink
             className="w-full flex items-center justify-center h-12 bg-gray-700 rounded font-semibold text-white"
             routeName="About Me"
@@ -68,6 +72,12 @@ export default function Header() {
             routeName="Contact Me"
             pathName={'/'}
           />
+        </div>
+        <div className="mt-6 text-center">
+          <IconLink className="mx-3 filter invert" iconSrc="/icons/twitter.svg" />
+          <IconLink className="mx-3 filter invert" iconSrc="/icons/github.svg" />
+          <IconLink className="mx-3 filter invert" iconSrc="/icons/linkedin.svg" />
+          <IconLink className="mx-3 filter invert" iconSrc="/icons/instagram.svg" />
         </div>
       </div>
     </header>
