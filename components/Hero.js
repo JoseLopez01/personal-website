@@ -4,7 +4,7 @@ import Skills from './Skills';
 export default function Hero() {
   return (
     <>
-      <div className="flex items-center p-10 md:h-3/5 md:rounded">
+      <div className="flex items-center p-10 md:h-3/5 md:rounded" id="about-me">
         <div className="w-full md:w-1/2">
           <div className="w-full mb-4">
             <p className="text-4xl font-bold md:text-6xl">

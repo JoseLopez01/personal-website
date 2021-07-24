@@ -25,24 +25,40 @@ export default function Header() {
             <LocalLink
               className="transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold"
               routeName="About Me"
-              pathName={'/'}
+              pathName={'#about-me'}
             />
             <LocalLink
               className="transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold"
               routeName="Work"
-              pathName={'/'}
+              pathName={'#work'}
             />
             <LocalLink
               className="transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold"
               routeName="Contact Me"
-              pathName={'/'}
+              pathName={'#contact'}
             />
           </div>
           <div className="w-1/5 hidden md:flex justify-end">
-            <IconLink className="mx-3 text-gray-400" iconSrc="/icons/twitter.svg" />
-            <IconLink className="mx-3 text-gray-400" iconSrc="/icons/github.svg" />
-            <IconLink className="mx-3 text-gray-400" iconSrc="/icons/linkedin.svg" />
-            <IconLink className="mx-3 text-gray-400" iconSrc="/icons/instagram.svg" />
+            <IconLink
+              className="mx-3 text-gray-400"
+              iconSrc="/icons/twitter.svg"
+              href="https://twitter.com/im_el_joe"
+            />
+            <IconLink
+              className="mx-3 text-gray-400"
+              iconSrc="/icons/github.svg"
+              href="https://github.com/JoseLopez01"
+            />
+            <IconLink
+              className="mx-3 text-gray-400"
+              iconSrc="/icons/linkedin.svg"
+              href="https://www.linkedin.com/in/jos%C3%A9-alejandro-b1836b1a9/"
+            />
+            <IconLink
+              className="mx-3 text-gray-400"
+              iconSrc="/icons/instagram.svg"
+              href="https://www.instagram.com/im_el_joe/"
+            />
           </div>
           <div className="md:hidden">
             <button onClick={handleToggleMenu}>
@@ -60,24 +76,40 @@ export default function Header() {
           <LocalLink
             className="w-full flex items-center justify-center h-12 bg-gray-700 rounded font-semibold text-white"
             routeName="About Me"
-            pathName={'/'}
+            pathName={'#about-me'}
           />
           <LocalLink
             className="w-full flex items-center justify-center h-12 hover:bg-gray-100 font-semibold text-white"
             routeName="Work"
-            pathName={'/'}
+            pathName={'#work'}
           />
           <LocalLink
             className="w-full flex items-center justify-center h-12 hover:bg-gray-100 font-semibold text-white"
             routeName="Contact Me"
-            pathName={'/'}
+            pathName={'#contact'}
           />
         </div>
         <div className="mt-6 text-center">
-          <IconLink className="mx-3 filter invert" iconSrc="/icons/twitter.svg" />
-          <IconLink className="mx-3 filter invert" iconSrc="/icons/github.svg" />
-          <IconLink className="mx-3 filter invert" iconSrc="/icons/linkedin.svg" />
-          <IconLink className="mx-3 filter invert" iconSrc="/icons/instagram.svg" />
+          <IconLink
+            className="mx-3 filter invert"
+            iconSrc="/icons/twitter.svg"
+            href="https://twitter.com/im_el_joe"
+          />
+          <IconLink
+            className="mx-3 filter invert"
+            iconSrc="/icons/github.svg"
+            href="https://github.com/JoseLopez01"
+          />
+          <IconLink
+            className="mx-3 filter invert"
+            iconSrc="/icons/linkedin.svg"
+            href="https://www.linkedin.com/in/jos%C3%A9-alejandro-b1836b1a9/"
+          />
+          <IconLink
+            className="mx-3 filter invert"
+            iconSrc="/icons/instagram.svg"
+            href="https://www.instagram.com/im_el_joe/"
+          />
         </div>
       </div>
     </header>

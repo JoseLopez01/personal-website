@@ -1,12 +1,17 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import PropTypes from 'prop-types';
 
-export default function IconLink({ iconSrc, className }) {
+import Image from 'next/image';
+
+export default function IconLink({ iconSrc, className, href }) {
   return (
-    <Link href="/">
-      <a className={className}>
-        <Image src={iconSrc} height={20} width={20} />
-      </a>
-    </Link>
+    <a className={className} href={href} target="_blank">
+      <Image src={iconSrc} height={20} width={20} />
+    </a>
   );
 }
+
+IconLink.propTypes = {
+  iconSrc: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+};

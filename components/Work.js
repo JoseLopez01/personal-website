@@ -2,7 +2,7 @@ import Project from './Project.js';
 
 function Work() {
   return (
-    <div className="my-6 md:px-10">
+    <div className="my-6 md:px-10" id="work">
       <div className="text-4xl mb-6 font-bold md:text-5xl text-center md:m-10">
         Projects I've <span className="text-blue-800">worked</span> in
       </div>
