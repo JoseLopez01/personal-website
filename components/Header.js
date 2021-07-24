@@ -77,16 +77,19 @@ export default function Header() {
             className="w-full flex items-center justify-center h-12 bg-gray-700 rounded font-semibold text-white"
             routeName="About Me"
             pathName={'#about-me'}
+            onClick={handleToggleMenu}
           />
           <LocalLink
             className="w-full flex items-center justify-center h-12 hover:bg-gray-100 font-semibold text-white"
             routeName="Work"
             pathName={'#work'}
+            onClick={handleToggleMenu}
           />
           <LocalLink
             className="w-full flex items-center justify-center h-12 hover:bg-gray-100 font-semibold text-white"
             routeName="Contact Me"
             pathName={'#contact'}
+            onClick={handleToggleMenu}
           />
         </div>
         <div className="mt-6 text-center">

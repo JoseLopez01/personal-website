@@ -5,8 +5,9 @@ export default function LocalLink({
   routeName,
   pathName,
   className,
+  onClick
 }) {
-  return <a className={className} href={pathName}>{routeName}</a>;
+  return <a className={className} href={pathName} onClick={onClick}>{routeName}</a>;
 }
 
 LocalLink.propTypes = {
