@@ -50,7 +50,7 @@ export default function Contact() {
 
   return (
     <>
-      <div className="text-4xl mb-6 font-bold md:text-5xl text-center md:m-10" id="contact">
+      <div className="text-4xl pt-10 font-bold md:text-5xl text-center md:m-10" id="contact">
         <span className="text-blue-800">Let's </span>
         get in
         <span className="text-blue-800"> touch</span>

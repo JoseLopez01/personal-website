@@ -1,7 +1,8 @@
+import { useEffect, useState } from 'react';
+
 import MenuSvg from '../icons/MenuSvg';
 import LocalLink from './LocalLink';
 import IconLink from './IconLink';
-import { useState } from 'react';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,13 +10,10 @@ export default function Header() {
   function handleToggleMenu() {
     setIsOpen(!isOpen);
   }
-  /**
-   * TODO:
-   *
-   * - [] Create a new component for Links
-   * - [] Create a nwe component for Image Icons
-   * - [] Add responsive new navBar
-   */
+
+  useEffect(() => {
+  }, []);
+
   return (
     <header className="sticky top-0 z-50">
       <div className="max-h-10 h-10 shadow-lg md:rounded bg-white transition duration-300">
@@ -74,19 +72,19 @@ export default function Header() {
       >
         <div className="flex flex-col items-center justify-center h-5/6">
           <LocalLink
-            className="w-full flex items-center justify-center h-12 bg-gray-700 rounded font-semibold text-white"
+            className="w-full flex items-center justify-center h-12 rounded font-semibold text-white"
             routeName="About Me"
             pathName={'#about-me'}
             onClick={handleToggleMenu}
           />
           <LocalLink
-            className="w-full flex items-center justify-center h-12 hover:bg-gray-100 font-semibold text-white"
+            className="w-full flex items-center justify-center h-12 font-semibold text-white"
             routeName="Work"
             pathName={'#work'}
             onClick={handleToggleMenu}
           />
           <LocalLink
-            className="w-full flex items-center justify-center h-12 hover:bg-gray-100 font-semibold text-white"
+            className="w-full flex items-center justify-center h-12 font-semibold text-white"
             routeName="Contact Me"
             pathName={'#contact'}
             onClick={handleToggleMenu}

@@ -68,8 +68,8 @@ export default function Skills() {
   ];
 
   return (
-    <>
-      <div className="text-4xl font-bold md:text-5xl text-center m-6">
+    <div className="pt-10">
+      <div className="text-4xl font-bold md:text-5xl text-center mb-6">
         Technical <span className="text-blue-800">Skills</span>
       </div>
       <div className="flex flex-wrap justify-around">
@@ -83,6 +83,6 @@ export default function Skills() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
