@@ -41,3 +41,36 @@ a {
     background-clip: content-box;
   }
 }
+
+.loading span {
+  animation-name: loadingDots;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.loading span:nth-child(2) {
+  animation-delay: .4s;
+}
+
+.loading span:nth-child(3) {
+  animation-delay: .6s;
+}
+
+@keyframes loadingDots {
+  40% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-.5rem);
+  }
+}
+
+@-webkit-keyframes loadingDots {
+  40% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-.5rem);
+  }
+}
