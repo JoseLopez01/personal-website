@@ -18,11 +18,13 @@ export default function Hero() {
             </p>
           </div>
           <button className="bg-gray-700 w-full md:w-2/5 px-4 py-2 font-semibold rounded-full text-white hover:bg-gray-800 transition duration-500">
-            Contact Me
+            <a href="#contact">
+              Contact Me
+            </a>
           </button>
         </div>
         <div className="hidden h-full md:block md:w-1/2">
-          <div className="h-full ml-auto rounded w-3/5 p-4 bg-gray-600"></div>
+          <div className="h-full ml-auto rounded w-3/5 p-4"></div>
         </div>
       </div>
       <ScrollIndicator />
