@@ -38,7 +38,7 @@ export default function Header() {
               pathName={'#contact'}
             />
           </div>
-          <div className="w-1/5 hidden md:flex justify-end">
+          <div className="w-1/5 hidden md:flex justify-end h-full items-center">
             <IconLink
               className="mx-3 text-gray-400"
               iconSrc="/icons/twitter.svg"
@@ -69,7 +69,7 @@ export default function Header() {
       </div>
       <div
         className={`absolute right-0 z-50 w-4/5 h-screen md:hidden bg-gray-800 ${
-          isOpen ? '' : 'hidden'
+          isOpen ? 'animate__animated animate__fadeInRight' : 'animate__animated animate__fadeOutRight'
         }`}
       >
         <div className="flex flex-col items-center justify-center h-5/6">
