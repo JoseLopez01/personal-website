@@ -1,5 +1,8 @@
 import { useState } from 'react';
+
 import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
+
 import LoadingDots from './LoadingDots';
 
 const initialState = {
@@ -31,24 +34,39 @@ export default function Contact() {
     setLoading(true);
     emailjs
       .send(
-        process.env.EMAILJS_SERVICE_ID,
-        process.env.EMAILJS_TEMPLATE_ID,
+        'service_2cofu8p',
+        'template_8ltvwhc',
         {
           from_name: name,
           from_email: email,
           message: idea,
           subject,
         },
-        process.env.EMAILJS_USER_ID
+        'user_uLyXH2jtOBjzcEeJnVAX2'
       )
       .then((response) => {
         if (response.status === 200) {
           resetForm();
           setLoading(false);
+          Swal.fire({
+            title: 'The email was sent',
+            position: 'top-right',
+            icon: 'success',
+            toast: true,
+            showConfirmButton: false,
+            timer: 1500
+          });
         }
       })
       .catch(() => {
         setLoading(false);
+        Swal.fire({
+          title: 'Something went wrong!',
+          position: 'top-right',
+          icon: 'error',
+          toast: true,
+          timer: 1500
+        });
       });
   }
 
