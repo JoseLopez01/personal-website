@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import MenuSvg from '../icons/MenuSvg';
 import LocalLink from './LocalLink';
@@ -10,9 +10,6 @@ export default function Header() {
   function handleToggleMenu() {
     setIsOpen(!isOpen);
   }
-
-  useEffect(() => {
-  }, []);
 
   return (
     <header className="sticky top-0 z-50">
@@ -65,52 +62,54 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div
-        className={`absolute right-0 z-50 w-4/5 h-screen md:hidden bg-gray-800 ${
-          isOpen ? 'animate__animated animate__fadeInRight' : 'animate__animated animate__fadeOutRight'
-        }`}
-      >
-        <div className="flex flex-col items-center justify-center h-5/6">
-          <LocalLink
-            className="w-full flex items-center justify-center h-12 rounded font-semibold text-white"
-            routeName="About Me"
-            pathName={'#about-me'}
-            onClick={handleToggleMenu}
-          />
-          <LocalLink
-            className="w-full flex items-center justify-center h-12 font-semibold text-white"
-            routeName="Work"
-            pathName={'#work'}
-            onClick={handleToggleMenu}
-          />
-          <LocalLink
-            className="w-full flex items-center justify-center h-12 font-semibold text-white"
-            routeName="Contact Me"
-            pathName={'#contact'}
-            onClick={handleToggleMenu}
-          />
-        </div>
-        <div className="mt-6 text-center">
-          <IconLink
-            className="mx-3 filter invert"
-            iconSrc="/icons/twitter.svg"
-            href="https://twitter.com/im_el_joe"
-          />
-          <IconLink
-            className="mx-3 filter invert"
-            iconSrc="/icons/github.svg"
-            href="https://github.com/JoseLopez01"
-          />
-          <IconLink
-            className="mx-3 filter invert"
-            iconSrc="/icons/linkedin.svg"
-            href="https://www.linkedin.com/in/jos%C3%A9-alejandro-b1836b1a9/"
-          />
-          <IconLink
-            className="mx-3 filter invert"
-            iconSrc="/icons/instagram.svg"
-            href="https://www.instagram.com/im_el_joe/"
-          />
+      <div className={isOpen ? 'w-full absolute h-screen' : '' } onClick={handleToggleMenu}>
+        <div
+          className={`fixed top-10 right-0 z-50 w-4/5 h-screen md:hidden bg-gray-800 animate__animated animate__faster ${
+            isOpen ? 'animate__fadeInRight' : 'animate__fadeOutRight'
+          }`}
+        >
+          <div className="flex flex-col items-center justify-center h-5/6">
+            <LocalLink
+              className="w-full flex items-center justify-center h-12 rounded font-semibold text-white"
+              routeName="About Me"
+              pathName={'#about-me'}
+              onClick={handleToggleMenu}
+            />
+            <LocalLink
+              className="w-full flex items-center justify-center h-12 font-semibold text-white"
+              routeName="Work"
+              pathName={'#work'}
+              onClick={handleToggleMenu}
+            />
+            <LocalLink
+              className="w-full flex items-center justify-center h-12 font-semibold text-white"
+              routeName="Contact Me"
+              pathName={'#contact'}
+              onClick={handleToggleMenu}
+            />
+          </div>
+          <div className="mt-6 text-center">
+            <IconLink
+              className="mx-3 filter invert"
+              iconSrc="/icons/twitter.svg"
+              href="https://twitter.com/im_el_joe"
+            />
+            <IconLink
+              className="mx-3 filter invert"
+              iconSrc="/icons/github.svg"
+              href="https://github.com/JoseLopez01"
+            />
+            <IconLink
+              className="mx-3 filter invert"
+              iconSrc="/icons/linkedin.svg"
+              href="https://www.linkedin.com/in/jos%C3%A9-alejandro-b1836b1a9/"
+            />
+            <IconLink
+              className="mx-3 filter invert"
+              iconSrc="/icons/instagram.svg"
+              href="https://www.instagram.com/im_el_joe/"
+            />
+          </div>
         </div>
       </div>
     </header>

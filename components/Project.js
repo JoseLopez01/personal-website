@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Project() {
   return (
-    <div className="col-span-4 flex mx-auto shadow-lg rounded-md">
+    <div className="col-span-4 flex mx-auto md:shadow-lg rounded-md">
       <div className="p-6 flex-auto">
         <p className="text-lg font-normal font-mono">
           All of my experience have been made in a private organization from Colombia, Soft-G Net. <br />
