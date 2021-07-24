@@ -34,15 +34,15 @@ export default function Contact() {
     setLoading(true);
     emailjs
       .send(
-        'service_2cofu8p',
-        'template_8ltvwhc',
+        process.env.EMAILJS_SERVICE_ID,
+        process.env.EMAILJS_TEMPLATE_ID,
         {
           from_name: name,
           from_email: email,
           message: idea,
           subject,
         },
-        'user_uLyXH2jtOBjzcEeJnVAX2'
+        process.env.EMAILJS_USER_ID
       )
       .then((response) => {
         if (response.status === 200) {
