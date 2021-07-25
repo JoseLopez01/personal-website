@@ -11,7 +11,7 @@ export default function Hero() {
               Hi, I'm <span className="text-blue-800">José</span> López A.
             </p>
             <p className="text-lg mt-4 font-semibold">
-              I'm a Colombian web developer, with over a year of experience in
+              I'm a Caribbean web developer, with over a year of experience in
               the making of web-apps using Angular, React and NextJs. I'm also a
               mobile developer using technologies like Flutter, React-Native,
               Ionic, Cordova and Capacitor.
