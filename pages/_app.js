@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="og:title" content="Jose Lopez - Web Developer" />
         <meta name="og:url" content="https://j-lopez.herokuapp.com/" />
         <meta name="og:type" content="website" />
+        <meta name="og:image" content="images/logo.png" />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
