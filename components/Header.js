@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import Image from 'next/image';
+
 import MenuSvg from '../icons/MenuSvg';
 import LocalLink from './LocalLink';
 import IconLink from './IconLink';
@@ -15,7 +17,7 @@ export default function Header() {
     <header className="sticky top-0 z-50">
       <div className="max-h-10 h-10 shadow-lg md:rounded bg-white transition duration-300">
         <div className="flex justify-between items-center h-full px-4">
-          <div className="font-bold w-1/5">JL</div>
+          <Image src="/icons/icon.svg" height="20" width="20" />
           <div className="hidden md:block">
             <LocalLink
               className="transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold"
@@ -62,7 +64,10 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className={isOpen ? 'w-full absolute h-screen' : '' } onClick={handleToggleMenu}>
+      <div
+        className={isOpen ? 'w-full absolute h-screen' : ''}
+        onClick={handleToggleMenu}
+      >
         <div
           className={`fixed top-10 right-0 z-50 w-4/5 h-screen md:hidden bg-gray-800 animate__animated animate__faster ${
             isOpen ? 'animate__fadeInRight' : 'animate__fadeOutRight'
