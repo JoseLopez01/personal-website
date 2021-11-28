@@ -17,7 +17,9 @@ export default function Header() {
     <header className="sticky top-0 z-50">
       <div className="max-h-10 h-10 shadow-lg md:rounded bg-white transition duration-300">
         <div className="flex justify-between items-center h-full px-4">
-          <Image src="/icons/icon.svg" height="20" width="20" />
+          <div className="w-1/5 flex items-center">
+            <Image src="/icons/icon.svg" height="20" width="20" />
+          </div>
           <div className="hidden md:block">
             <LocalLink
               className="transition duration-500 mx-3 px-3 py-2 rounded text-sm hover:bg-gray-200 font-bold"
