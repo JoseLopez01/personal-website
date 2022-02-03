@@ -71,9 +71,7 @@ export default function Header() {
         onClick={handleToggleMenu}
       >
         <div
-          className={`fixed top-10 right-0 z-50 w-4/5 h-screen md:hidden bg-gray-800 animate__animated animate__faster ${
-            isOpen ? 'animate__fadeInRight' : 'animate__fadeOutRight'
-          }`}
+          className={`fixed top-10 right-0 z-50 w-4/5 h-screen md:hidden bg-gray-800 animate__animated animate__faster hidden`}
         >
           <div className="flex flex-col items-center justify-center h-5/6">
             <LocalLink

@@ -13,14 +13,12 @@ export default function Hero() {
             <p className="text-lg mt-4 font-semibold">
               I'm a Caribbean web developer, with over a year of experience in
               the making of web-apps using Angular, React and NextJs. I'm also a
-              mobile developer using technologies like Flutter, React-Native,
-              Ionic, Cordova and Capacitor.
+              mobile developer with technologies like Ionic, Cordova and
+              Capacitor.
             </p>
           </div>
           <button className="bg-gray-700 w-full md:w-2/5 px-4 py-2 font-semibold rounded-full text-white hover:bg-gray-800 transition duration-500">
-            <a href="#contact">
-              Contact Me
-            </a>
+            <a href="#contact">Contact Me</a>
           </button>
         </div>
         <div className="hidden h-full md:block md:w-1/2">
