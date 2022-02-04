@@ -2,9 +2,9 @@ import React from 'react';
 
 function MenuIcon() {
   return (
-    <div>
+    <div className="lg:hidden">
       <button className="text-5xl">
-        <i class="uil uil-bars"></i>
+        <i className="uil uil-bars"></i>
       </button>
     </div>
   );

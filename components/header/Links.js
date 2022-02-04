@@ -11,18 +11,14 @@ const LINKS = [
     name: 'Work',
     route: '#work',
   },
-  {
-    name: 'Contact me',
-    route: '#contact',
-  },
 ];
 
 function Links() {
   return (
-    <div className="hidden">
+    <div className="hidden lg:block">
       {LINKS.map(({ name, route }) => (
         <LocalLink
-          className="transition duration-500 mx-3 px-3 py-2 rounded hover:bg-gray-200 font-bold"
+          className="transition duration-500 mx-3 px-3 py-2 rounded hover:bg-gray-200"
           routeName={name}
           pathName={route}
         />
