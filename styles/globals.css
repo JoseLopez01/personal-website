@@ -74,3 +74,7 @@ a {
     transform: translateY(-.5rem);
   }
 }
+
+.main-container {
+  height: calc(100vh - 72px);
+}

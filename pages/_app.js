@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }) {
         ></link>
       </Head>
       <Header />
-      <main role="main" className="max-w-screen-xl mx-auto font-sans md:py-2">
+      <main role="main" className="max-w-screen-lg mx-auto font-sans md:py-2 main-container">
         <Component {...pageProps} />
       </main>
     </div>
