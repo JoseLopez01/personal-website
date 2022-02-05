@@ -13,7 +13,7 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 px-4">
+    <header className="sticky top-0 z-50 px-4 bg-gray-100">
       <div className="max-w-screen-lg mx-auto py-4 flex items-center justify-between">
         <MyIcon />
         <Links />
