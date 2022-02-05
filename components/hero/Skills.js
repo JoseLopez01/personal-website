@@ -1,12 +1,11 @@
-import AngularSvg from '../icons/AngularSvg';
-import CapacitorSvg from '../icons/CapacitorSvg';
-import FlutterSvg from '../icons/FlutterSvg';
-import IonicSvg from '../icons/IonicSvg';
-import LaravelSvg from '../icons/LaravelSvg';
-import ReactSvg from '../icons/ReactSvg';
-import ReduxSvg from '../icons/ReduxSvg';
-import SassSvg from '../icons/SassSvg';
-import TailwindSvg from '../icons/TailwindSvg';
+import AngularSvg from '../../icons/AngularSvg';
+import IonicSvg from '../../icons/IonicSvg';
+import ReactSvg from '../../icons/ReactSvg';
+import ReduxSvg from '../../icons/ReduxSvg';
+import TailwindSvg from '../../icons/TailwindSvg';
+import NestjsSvg from '../../icons/NestjsSvg';
+import NextjsSvg from '../../icons/NextjsSvg';
+
 import Skill from './Skill';
 
 export default function Skills() {
@@ -24,16 +23,22 @@ export default function Skills() {
       icon: ReactSvg,
     },
     {
+      name: 'NestJs',
+      color: '#E0234E',
+      percent: 80,
+      icon: NestjsSvg,
+    },
+    {
       name: 'Ionic',
       color: '#3880FF',
       percent: 80,
       icon: IonicSvg,
     },
     {
-      name: 'Laravel',
-      color: '#FF2D20',
+      name: 'NextJs',
+      color: '#000000',
       percent: 80,
-      icon: LaravelSvg,
+      icon: NextjsSvg,
     },
     {
       name: 'Redux',
@@ -47,30 +52,36 @@ export default function Skills() {
       percent: 80,
       icon: TailwindSvg,
     },
-    {
+    /* {
+      name: 'Laravel',
+      color: '#FF2D20',
+      percent: 80,
+      icon: LaravelSvg,
+    }, */
+    /* {
       name: 'Sass',
       color: '#CC6699',
       percent: 80,
       icon: SassSvg,
-    },
-    {
+    }, */
+    /* {
       name: 'Flutter',
       color: '#02569B',
       percent: 80,
       icon: FlutterSvg,
-    },
-    {
+    }, */
+    /* {
       name: 'Capacitor',
       color: '#119EFF',
       percent: 80,
       icon: CapacitorSvg,
-    },
+    }, */
   ];
 
   return (
     <div className="pt-10">
       <div className="text-4xl font-bold md:text-5xl text-center mb-6">
-        Technical <span className="text-blue-800">Skills</span>
+        <span className="text-blue-700">Skills</span>
       </div>
       <div className="flex flex-wrap justify-around">
         {skills.map((skill, index) => (

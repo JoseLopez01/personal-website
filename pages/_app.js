@@ -7,7 +7,7 @@ import '../styles/globals.css';
 function MyApp({ Component, pageProps }) {
   return (
     <div
-      className="h-full overflow-x-hidden"
+      className="h-full overflow-x-hidden bg-gray-100"
       style={{ scrollBehavior: 'smooth' }}
     >
       <Head>

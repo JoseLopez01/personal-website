@@ -1,7 +1,4 @@
-import Image from 'next/image';
-
-import ScrollIndicator from '../ScrollIndicator';
-import Skills from '../Skills';
+import Skills from './Skills';
 import MyDescription from './MyDescription';
 
 export default function Hero() {
@@ -13,9 +10,9 @@ export default function Hero() {
             <MyDescription />
           </div>
         </div>
-        <div className="col-span-1 relative">
-        </div>
+        <div className="col-span-1 relative"></div>
       </div>
+      <Skills />
     </>
   );
 }
