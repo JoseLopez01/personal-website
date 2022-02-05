@@ -8,7 +8,6 @@ import LoadingDots from './LoadingDots';
 const initialState = {
   email: '',
   name: '',
-  subject: '',
   idea: '',
 };
 
@@ -16,7 +15,7 @@ export default function Contact() {
   const [form, setForm] = useState(initialState);
   const [loading, setLoading] = useState(false);
 
-  const { email, name, subject, idea } = form;
+  const { email, name, idea } = form;
 
   function handleChange({ target: { name, value } }) {
     setForm({
@@ -29,45 +28,56 @@ export default function Contact() {
     setForm(initialState);
   }
 
-  function handleSubmit(e) {
+  function sendEmail(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID) {
+    return emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      {
+        from_name: name,
+        from_email: email,
+        message: idea,
+        subject: 'PERSONAL WEBSITE',
+      },
+      EMAILJS_USER_ID
+    );
+  }
+
+  async function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
-    emailjs
-      .send(
-        process.env.EMAILJS_SERVICE_ID,
-        process.env.EMAILJS_TEMPLATE_ID,
-        {
-          from_name: name,
-          from_email: email,
-          message: idea,
-          subject,
-        },
-        process.env.EMAILJS_USER_ID
-      )
-      .then((response) => {
-        if (response.status === 200) {
-          resetForm();
-          setLoading(false);
-          Swal.fire({
-            title: 'The email was sent',
-            position: 'top-right',
-            icon: 'success',
-            toast: true,
-            showConfirmButton: false,
-            timer: 1500
-          });
-        }
-      })
-      .catch(() => {
-        setLoading(false);
+    try {
+      const {
+        NEXT_PUBLIC_SERVICE_ID,
+        NEXT_PUBLIC_TEMPLATE_ID,
+        NEXT_PUBLIC_USER_ID,
+      } = process.env;
+      const response = await sendEmail(
+        NEXT_PUBLIC_SERVICE_ID,
+        NEXT_PUBLIC_TEMPLATE_ID,
+        NEXT_PUBLIC_USER_ID
+      );
+      if (response.status === 200) {
+        resetForm();
         Swal.fire({
-          title: 'Something went wrong!',
+          title: 'The email was sent',
           position: 'top-right',
-          icon: 'error',
+          icon: 'success',
           toast: true,
-          timer: 1500
+          showConfirmButton: false,
+          timer: 1500,
         });
+      }
+    } catch (error) {
+      console.log({ error });
+      Swal.fire({
+        title: 'Something went wrong!',
+        position: 'top-right',
+        icon: 'error',
+        toast: true,
+        timer: 1500,
       });
+    }
+    setLoading(false);
   }
 
   return (
@@ -101,15 +111,6 @@ export default function Contact() {
             name="email"
             className="focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-full text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-3 my-2"
             value={email}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="text"
-            placeholder="Subject"
-            name="subject"
-            className="focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-full text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-3 my-2"
-            value={subject}
             onChange={handleChange}
             required
           />

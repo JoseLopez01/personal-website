@@ -1,4 +1,4 @@
-import LocalLink from '../LocalLink';
+import LocalLink from './LocalLink';
 
 import React from 'react';
 
@@ -10,6 +10,10 @@ const LINKS = [
   {
     name: 'Work',
     route: '#work',
+  },
+  {
+    name: 'My blog',
+    route: '#blog',
   },
 ];
 
