@@ -25,6 +25,7 @@ function Links() {
           className="transition duration-500 mx-3 px-3 py-2 rounded hover:bg-gray-200"
           routeName={name}
           pathName={route}
+          key={name}
         />
       ))}
     </div>

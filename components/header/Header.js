@@ -4,6 +4,7 @@ import Links from './Links';
 import ContactButton from './ContactButton';
 import MenuIcon from './MenuIcon';
 import MyIcon from './MyIcon';
+import Menu from '../menu/Menu';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +19,9 @@ export default function Header() {
         <MyIcon />
         <Links />
         <ContactButton />
-        <MenuIcon />
+        <MenuIcon handleOnOpen={handleToggleMenu} />
       </div>
+      <Menu isOpen={isOpen} handleOnClose={handleToggleMenu} />
     </header>
   );
 }

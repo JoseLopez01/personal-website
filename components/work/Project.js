@@ -2,7 +2,7 @@ import React from 'react';
 
 function Project({ description, stack, company, appName, route }) {
   return (
-    <div className="project-container shadow-md p-4">
+    <div className="w-4/5 md:w-52 min-w-52 shadow-md p-4">
       <h3 className="text-xl font-medium mb-4">{appName}</h3>
       <div>
         <p className="text-gray-500 text-sm">{description}</p>
