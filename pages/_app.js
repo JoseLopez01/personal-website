@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:title" content="Jose Lopez - Web Developer" />
         <meta property="og:url" content="www.lopez-ariza.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="images/logo.png" />
+        <meta property="og:image" content="/images/logo.png" />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
