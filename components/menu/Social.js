@@ -24,7 +24,10 @@ function Social({ light }) {
     <>
       {SOCIAl.map((social) => (
         <a href={social.link} target="_blank">
-          <button className={`text-3xl ${light ? 'text-black' : 'text-white'}`}>
+          <button
+            className={`text-3xl ${light ? 'text-black' : 'text-white'}`}
+            type="button"
+          >
             <i className={`ui ${social.icon}`}></i>
           </button>
         </a>
