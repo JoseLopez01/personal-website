@@ -41,7 +41,7 @@ function Work() {
       <div className="text-4xl font-bold md:text-5xl text-center md:m-10">
         My work
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-center gap-4 flex-wrap">
         {PROJECTS.map(({ appName, company, description, stack, route }) => (
           <Project
             appName={appName}
