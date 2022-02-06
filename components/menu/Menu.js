@@ -1,6 +1,8 @@
 import React from 'react';
+import { useAsideBarContext } from '../../context/AsideBarContext';
 
 import LocalLink from '../header/LocalLink';
+import Social from './Social';
 
 const LINKS = [
   {
@@ -21,11 +23,12 @@ const LINKS = [
   },
 ];
 
-function Menu({ isOpen, handleOnClose }) {
+function Menu() {
+  const { closeAsideBar, isOpen } = useAsideBarContext();
   return isOpen ? (
     <div
       className="w-full absolute h-screen bg-black top-0 left-0 bg-opacity-5"
-      onClick={handleOnClose}
+      onClick={closeAsideBar}
     >
       <aside className="w-4/5 h-full ml-auto bg-gray-800 p-4 flex justify-between flex-col">
         <div className="w-full flex">
@@ -39,32 +42,13 @@ function Menu({ isOpen, handleOnClose }) {
               routeName={name}
               pathName={route}
               className="w-full flex items-center justify-center h-12 font-semibold text-white"
-              onClick={handleOnClose}
+              onClick={closeAsideBar}
               key={route}
             />
           ))}
         </div>
         <div className="flex justify-center gap-4">
-          <a>
-            <button className="text-white text-3xl">
-              <i className="uil uil-twitter"></i>
-            </button>
-          </a>
-          <a>
-            <button className="text-white text-3xl">
-              <i className="uil uil-medium-m"></i>
-            </button>
-          </a>
-          <a>
-            <button className="text-white text-3xl">
-              <i className="uil uil-linkedin"></i>
-            </button>
-          </a>
-          <a>
-            <button className="text-white text-3xl">
-              <i className="uil uil-github"></i>
-            </button>
-          </a>
+          <Social />
         </div>
       </aside>
     </div>

@@ -6,10 +6,7 @@ import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div
-      className="h-full overflow-x-hidden bg-gray-100"
-      style={{ scrollBehavior: 'smooth' }}
-    >
+    <>
       <Head>
         <title>Jose Lopez - Web Developer</title>
         <meta
@@ -34,11 +31,8 @@ function MyApp({ Component, pageProps }) {
           href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
         ></link>
       </Head>
-      <Header />
-      <main role="main" className="max-w-screen-lg mx-auto font-sans md:py-2 main-container">
-        <Component {...pageProps} />
-      </main>
-    </div>
+      <Component {...pageProps} />
+    </>
   );
 }
 

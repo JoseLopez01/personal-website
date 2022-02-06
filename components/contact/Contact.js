@@ -4,6 +4,7 @@ import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 
 import LoadingDots from './LoadingDots';
+import Social from '../menu/Social';
 
 const initialState = {
   email: '',
@@ -129,6 +130,9 @@ export default function Contact() {
         >
           {loading ? <LoadingDots /> : 'Submit'}
         </button>
+        <div className="flex justify-center gap-4 mt-4">
+          <Social light />
+        </div>
       </form>
     </>
   );

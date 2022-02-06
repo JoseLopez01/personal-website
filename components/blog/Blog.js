@@ -16,7 +16,7 @@ const BLOGS = [
 
 function Blog() {
   return (
-    <div className="pt-10" id="work">
+    <div className="pt-10" id="blog">
       <div className="text-4xl font-bold md:text-5xl text-center m-10">
         My Blog
       </div>
