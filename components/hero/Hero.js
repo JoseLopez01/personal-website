@@ -5,8 +5,8 @@ export default function Hero() {
   return (
     <>
       <div className="grid grid-cols-2 h-1/2" id="about-me">
-        <div className="col-span-1 relative">
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
+        <div className="pl-4 lg:pl-0 col-span-2 lg:col-span-1 flex justify-center items-center">
+          <div>
             <MyDescription />
           </div>
         </div>
