@@ -29,6 +29,7 @@ function Blog() {
                 height={175}
                 width={263}
                 className="rounded-t"
+                alt=""
               />
               <div className="px-2 pb-4">
                 <span className="text-sm">{name}</span>
